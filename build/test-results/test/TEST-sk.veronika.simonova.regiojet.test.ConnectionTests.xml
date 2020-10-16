@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sk.veronika.simonova.regiojet.test.ConnectionTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-10-15T14:47:08" hostname="LFDCHG0JSQ2" time="10.504">
+  <properties/>
+  <testcase name="find direct connections between Ostrava and Brno and validate response(int, String[])[1]" classname="sk.veronika.simonova.regiojet.test.ConnectionTests" time="4.789"/>
+  <testcase name="find direct connections between Ostrava and Brno and validate response(int, String[])[2]" classname="sk.veronika.simonova.regiojet.test.ConnectionTests" time="1.089"/>
+  <testcase name="find direct connections between Ostrava and Brno and validate response(int, String[])[3]" classname="sk.veronika.simonova.regiojet.test.ConnectionTests" time="1.298"/>
+  <testcase name="find direct connections between Ostrava and Brno and validate response(int, String[])[4]" classname="sk.veronika.simonova.regiojet.test.ConnectionTests" time="1.182"/>
+  <testcase name="find direct connections between Ostrava and Brno and validate response(int, String[])[5]" classname="sk.veronika.simonova.regiojet.test.ConnectionTests" time="1.059"/>
+  <testcase name="find direct connections between Ostrava and Brno and validate response(int, String[])[6]" classname="sk.veronika.simonova.regiojet.test.ConnectionTests" time="1.081"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

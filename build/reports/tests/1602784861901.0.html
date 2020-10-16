@@ -1,0 +1,1380 @@
+<html lang="en" class=" no-touchevents js no-touch csstransitions"><head aria-hidden="true">
+<meta charset="utf-8">
+<title>RegioJet | Autobusy a vlaky</title>
+<meta name="author" content="Student Agency s.r.o.; e-mail: info@studentagency.cz">
+<meta name="description" content="">
+<meta name="keywords" content=", , %parent%">
+<meta name="robots" content="all"><link rel="manifest" href="/manifest.json">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="/sys/images/favicon.ico"> 
+<link rel="apple-touch-icon" sizes="57x57" href="/sys/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/sys/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/sys/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/sys/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/sys/images/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/sys/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/sys/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/sys/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/sys/images/apple-touch-icon-180x180.png">
+<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/T9w1ROdplctW2nVKvNJYXH8o/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-3QFmGa9WBVUnmTTGehi+1Uin1pmBuS/I5R1Ce52Aiiuviet65v+bH12eR4+kUUcx" aria-hidden="true"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-PTPMNS" aria-hidden="true"></script><script type="text/javascript" src="https://api.mapy.cz/loader.js" aria-hidden="true"></script>
+<script type="text/javascript" aria-hidden="true">
+Loader.load();
+</script><script charset="utf-8" type="text/javascript" src="https://api.mapy.cz/js/api/v4/smap-jak.js?v=0.9137981835100228" aria-hidden="true"></script><link rel="stylesheet" type="text/css" href="https://api.mapy.cz/css/api/v4/smap-jak.css?v0.7375130109758592"><script charset="utf-8" type="text/javascript" src="https://api.mapy.cz/config.js?key=&amp;v=0.2225708089108469" aria-hidden="true"></script><script charset="utf-8" type="text/javascript" src="https://api.mapy.cz/js/lang/cs.js?v=0.060392364105582796" aria-hidden="true"></script> <!-- mapy.cz -->
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/sys/images/mstile-150x150.png">
+
+<link rel="icon" type="image/png" href="/sys/images/favicon_16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/sys/images/favicon_32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/sys/images/favicon_48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/sys/images/favicon_160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/sys/images/favicon_192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/sys/images/favicon_256.png" sizes="256x256">
+<link rel="manifest" href="/sys/images/manifest.json">
+<link rel="mask-icon" href="/sys/images/safari-pinned-tab.svg" color="#000000">
+<meta name="theme-color" content="#ffffff">
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async="" aria-hidden="true"></script>
+<script aria-hidden="true">
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(["init", {
+		appId: "300a1574-e11f-47d4-9296-9099e5599e51",
+		autoRegister: false,
+		httpPermissionRequest: {
+			enable: true
+		},
+		notifyButton: {
+			enable: false /* Set to false to hide */
+		},
+		promptOptions: {
+			/* These prompt options values configure both the HTTP prompt and the HTTP popup. */
+			/* actionMessage limited to 90 characters */
+			actionMessage: "Najlepšie ponuky vám už neujdú! Zapnite si notifikácie",
+			/* acceptButtonText limited to 15 characters */
+			acceptButtonText: "Zapnúť",
+			/* cancelButtonText limited to 15 characters */
+			cancelButtonText: "Nemám záujem"
+		},
+		safari_web_id: 'web.onesignal.auto.300a1574-e11f-47d4-9296-9099e5599e51',
+		welcomeNotification: {
+			"title": "Zapnuté!",
+			"message": "O našich ponukách budete vedieť ako prvý!",
+			// "url": "" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
+		}
+	}]);
+	
+	OneSignal.push(function() {
+		OneSignal.on('popoverCancelClick', function() {
+			setCookie('popover-no-thanks', 'true', 30);
+		});
+	});
+	
+	if(!checkCookie('popover-no-thanks')) {
+		OneSignal.push(function() {
+			OneSignal.showHttpPrompt();
+		});
+	}
+	
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	function checkCookie(name) {
+		var cookie = getCookie(name);
+		if (cookie != "") {
+			return true
+		} else {
+			return false
+		}
+	}
+</script>  	<link href="/opencms/export/sites/regiojet.sk/sys/css/bootstrap-3.3.6.css?sa-version=1602769622113" rel="stylesheet" type="text/css">
+
+  	<link href="/opencms/export/sites/regiojet.sk/sys/css/select.css?sa-version=1602769622113" rel="stylesheet" type="text/css">
+
+  	<link href="/opencms/export/sites/regiojet.sk/sys/css/flexslider-min.css?sa-version=1602769622113" rel="stylesheet" type="text/css">
+
+  	<link href="/opencms/export/sites/regiojet.sk/sys/css/styles.min.v1.css?sa-version=1602769622113" rel="stylesheet" type="text/css">
+
+  	<link href="/opencms/export/sites/regiojet.sk/sys/css/jquery-ui-1.10.3.custom.css?sa-version=1602769622113" rel="stylesheet" type="text/css">
+
+  	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  	<link href="/opencms/export/shared/js/gamma/style.css?sa-version=1602769622113" rel="stylesheet" type="text/css">
+
+  	<link href="/opencms/export/shared/js/gamma/noJS.css?sa-version=1602769622113" rel="stylesheet" type="text/css">
+
+
+  	<script src="/shared/js/jquery/jquery-1.11.2.min.js?sa-version=1481833616601" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/jquery-ui/jquery-ui-1.11.3.min.js?sa-version=1481833616601" type="text/javascript" aria-hidden="true"></script> 
+	
+	<script aria-hidden="true">
+	dataLayer = [];
+	const pathName = window.location.pathname
+		switch(true){
+			case pathName == "/":
+				dataLayer.push({  
+					'pageType': 'Home'
+				  });
+				break
+			case pathName.includes("/akcni-nabidky/"):
+				dataLayer.push({  
+   				 	'pageType': 'Akční nabídky'
+  				});
+				break
+			case pathName.includes("/jizdni-rady-a-zastavky/"):
+				dataLayer.push({  
+    				'pageType': 'Jízdní řády'
+  				});
+				break
+			case pathName.includes("/ceny-a-jizdenky/"):
+				dataLayer.push({  
+    				'pageType': 'Ceny a jízdenky'
+  				});
+				break
+			case pathName.includes("/servis/"):
+				dataLayer.push({  
+    				'pageType': 'Servis'
+  				});
+				break
+			case pathName.includes("/cestovani-skupin/"):
+				dataLayer.push({  
+    				'pageType': 'Cestování skupin'
+  				});
+				break
+			case pathName.includes("/novinky-z-trate/"):
+				dataLayer.push({  
+    				'pageType': 'Zpoždění spojů'
+  				});
+				break
+			case pathName.includes("/o-nas/"):
+				dataLayer.push({  
+    				'pageType': 'O nás'
+ 				 });
+				break
+			default:
+				dataLayer.push({  
+    				'pageType': 'Ostatní'
+  				});
+		}
+	</script>
+	
+
+    <!-- Google Tag Manager -->
+    <noscript aria-hidden="true"><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PTPMNS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script aria-hidden="true">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PTPMNS');</script>
+    <!-- End Google Tag Manager -->
+
+<style type="text/css">.container-cookiesBar{position:fixed;
+color:#fff;
+background-color:rgba(81,90,96,0.9);
+padding-top:1em;
+padding-bottom:1em;
+z-index:9999999999;
+width:300px;
+font-size:14px;
+line-height:20px;
+padding:1em;
+bottom:20px;
+right:20px;
+} 
+.cookiebar-accept-button {float:none;
+color:#515A60;
+padding:0.3em 1em;
+margin-top:1em;
+text-decoration:none;
+background:#fff;
+border-bottom:none;
+display:block;
+text-align:center;
+} 
+.cookiebar-more-link {text-decoration:underline;
+color:#fff;
+border-bottom:none;
+} 
+@media (max-width: 500px) {.container-cookiesBar{width:100%;
+left:0;
+right:0;
+bottom:0;
+}}</style><script src="https://cdn.onesignal.com/sdks/OneSignalPageSDKES6.js?v=151104" async=""></script><script async="" src="https://static.hotjar.com/c/hotjar-853294.js?sv=6"></script><script async="" src="https://script.hotjar.com/modules.0734134ae79697970353.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><link rel="stylesheet" href="https://onesignal.com/sdks/OneSignalSDKStyles.css?v=2"></head>
+		
+		
+			<body class="sk homepage-new js lg browser-chrome"><iframe id="accessTokenIframe" src="https://www.regiojet.cz/accessToken.jsp" frameborder="0" scrolling="no" style="width: 0px; height: 0px; display: none;"></iframe>
+		
+		
+
+    <!-- Google Tag Manager -->
+    <noscript aria-hidden="true"><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PTPMNS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager -->
+
+
+		<header id="header" class="menu-is-hidden" style="top: -146px;">
+
+
+
+<div id="new-header" class="middle fixed-menu">
+	<div class="container">
+
+		<!-- CURRENCY | LANGUAGE | REGISTRACE | PRIHLASENI -->
+
+		<!-- REGIOJET LOGO -->
+		<a id="logo" class="hidden-xs" href="/">
+			<img class="pull-left" src="/sys/images/header-logo-small.svg" alt="RegioJet" tabindex="1">					
+		</a>
+
+		<!-- MENU MOBILE HAMBURGER -->
+		<div id="open-mmenu" class="button hidden-sm hidden-md hidden-lg">
+			<a href="/">
+				<img id="fixed-logo-mobile" src="/sys/images/header-logo-regiojet.svg" alt="RegioJet">
+			</a>
+			<span class="mmenu-ico" id="mmenu-ico">
+				<span></span><span></span><span></span><span></span>
+			</span>
+		</div>
+
+		<!-- MAGNIFIER FOR SEARCH -->
+		<div class="search-mobile pull-right">
+			
+			<a href="/vyhledavani.html?focus=true"><i class="fa fa-search fa-1x"></i></a>
+		</div>
+
+		<!-- LANGUAGE dropdowns -->
+		<div tabindex="2" class="onclick-menu language">
+			<span class="language-flag">SK <img src="/.config/menus/language/sk.png" alt="sk"></span>
+			<div class="arrow-down">
+				<svg width="10" height="6" viewBox="0 0 30 16" xmlns="http://www.w3.org/2000/svg"><path fill="#1b1b1b" fill-rule="nonzero" d="M28.273.852L15.152 12.661 2.027.85.398 2.665l14.754 13.281L29.907 2.664z"></path></svg>
+			</div>
+			<ul class="onclick-menu-content">
+				<!-- language flags, languages -->			
+				<li class="currency-list">
+					<a href="https://www.regiojet.cz/" id="link_cz"><span class="flag">
+					<img src="/.config/menus/language/cs.png" alt="cs">
+				</span> Čeština</a>									
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.sk/" id="link_sk"><span class="flag">
+					<img src="/.config/menus/language/sk.png" alt="sk">
+				</span> Slovenčina</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.com/" id="link_en"><span class="flag">
+					<img src="/.config/menus/language/en.png" alt="en">
+				</span> English</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.de/" id="link_de"><span class="flag">
+					<img src="/.config/menus/language/de.jpg" alt="de">
+				</span> Deutsch</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.at/" id="link_at"><span class="flag">
+					<img src="/.config/menus/language/at.png" alt="at">
+				</span> Deutsch</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.hu" id="link_hu"><span class="flag">
+					<img src="/.config/menus/language/hu.png" alt="hu">
+				 </span> Magyar</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.pl" id="link_pl"><span class="flag">
+					<img src="/.config/menus/language/pl.png" alt="pl">
+	 				</span> Polski</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.es" id="link_es"><span class="flag">
+	 				<img src="/.config/menus/language/es.png" alt="es">
+				</span> Español</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.ru" id="link_ru"><span class="flag">
+	 				<img src="/.config/menus/language/ru.png" alt="ru">
+				</span> русский</a>
+				</li>
+				<li class="currency-list">
+					<a href="https://www.regiojet.cn" id="link_cn"><span class="flag">
+	 				<img src="/.config/menus/language/zh.png" alt="zh">
+	 			</span> 中国</a>
+				</li>
+			</ul>
+		</div>
+	</div>		
+					
+	<!-- BUTTON: REGISTRATION | SIGNIN -->
+	<div id="login"><button tabindex="3" type="button" id="registration" class="btn btn-default" onclick="location.href='https://shop.regiojet.sk/registration'">
+						  Registrácia
+						  </button>
+						  <button tabindex="4" type="button" id="signin" class="btn btn-default" onclick="location.href='https://shop.regiojet.sk/login'">
+						  Prihlásenie
+						  </button></div>
+</div> 
+<!-- END: new-header -->
+     
+<!-- NAVIGATION -->
+<div id="main-nav">
+    <div class="container">
+        <nav class="clearfix" title="Hlavní menu">
+            <ul id="newHeader-nav-ul"><li tabindex="5"><a href="/rezervacia/">Rezervácia</a>
+</li><li tabindex="6"><a href="/akciove-ponuky/">Akciové ponuky</a></li>
+<li class="submenu " tabindex="7"><a href="/cestovne-poriadky-a-zastavky/">Cestovné poriadky a zastávky</a>
+<div><ul class="container"><li><a href="/cestovne-poriadky-a-zastavky/cestovne-poriadky/">Cestovné poriadky</a>
+</li><li><a href="/cestovne-poriadky-a-zastavky/zastavky/">Zastávky</a>
+</li><li><a href="/cestovne-poriadky-a-zastavky/mapa-liniek/">Mapa liniek</a>
+</li><li><a href="/cestovne-poriadky-a-zastavky/kooperacia-s-dopravcami/">Kooperácia s dopravcami</a>
+</li><li><a href="/cestovne-poriadky-a-zastavky/listky-inych-dopravcov/">Lístky ostatných dopravcov</a>
+</li>
+</ul>
+</div>
+</li><li class="submenu " tabindex="8"><a href="/ceny-a-listky/">Ceny a lístky</a>
+<div><ul class="container"><li><a href="/ceny-a-listky/cestovne-a-ceny/">Cenníky</a>
+</li><li><a href="/ceny-a-listky/garancia/">Garancia včasného príchodu</a>
+</li><li><a href="/ceny-a-listky/tarify-a-zlavy-z-cestovneho/">Tarify a zľavy</a>
+</li><li><a href="/ceny-a-listky/zlavy-75-percent-pre-studentov-a-seniorov/">Zľavy 75 % po ČR</a>
+</li><li><a href="/ceny-a-listky/typy-listkov/">Typy lístkov</a>
+</li><li><a href="/ceny-a-listky/sposob-rezervacie/">Spôsoby rezervácie</a>
+</li><li><a href="/ceny-a-listky/sposob-platby/">Spôsoby platby</a>
+</li><li><a href="/ceny-a-listky/batozina-a-zvierata/">Preprava batožiny, detí a zvierat</a>
+</li><li><a href="/ceny-a-listky/skupiny-vo-vlakoch/">Skupiny</a>
+</li><li><a href="/ceny-a-listky/firemny-kreditovy-cestovny-listok/">Firemná Kreditovka</a>
+</li>
+</ul>
+</div>
+</li><li class="submenu " tabindex="9"><a href="/servis/">Servis</a>
+<div><ul class="container"><li><a href="/servis/preco-cestovat-s-regiojetom/">Prečo cestovať s nami</a>
+</li><li><a href="/servis/sluzby-v-autobusoch/">Servis v autobusoch</a>
+</li><li><a href="/servis/sluzby-vo-vlaku/">Servis vo vlaku</a>
+</li><li><a href="/servis/stevardi/">Stevardky a stevardi</a>
+</li><li><a href="/servis/imobilni-cestujuci/">Imobilní cestujúcí</a>
+</li><li><a href="/servis/cakarne-lounge/">Čakárne/Lounge</a>
+</li><li><a href="/servis/zaruka-odletu/">Záruka odletu</a>
+</li><li><a href="/servis/doprava-k-vlaku/">Doprava k vlaku a autobusu</a>
+</li><li><a href="/servis/transfer-na-letisko/">Transfer na letisko</a>
+</li><li><a href="/servis/sprievodca/">Audio sprievodca SmartGuide</a>
+</li><li><a href="/servis/zlavy-u-partnerov/">Zľavy u partnerov</a>
+</li><li><a href="/servis/vase-podnety/">Vaše podnety</a>
+</li>
+</ul>
+</div>
+</li><li class="submenu " tabindex="10"><a href="/prenajom-vozidiel/">Prenájom vozidiel</a>
+<div><ul class="container"><li><a href="/prenajom-vozidiel/skupiny-vo-vlakoch/">Skupiny vo vlakoch</a>
+</li><li><a href="/prenajom-vozidiel/prenajom-autobusov/">Prenájom autobusov</a>
+</li><li><a href="/prenajom-vozidiel/firemny-kreditovy-cestovny-listok/">Firemný kreditový cestovný lístok</a>
+</li>
+</ul>
+</div>
+</li><li class="submenu " tabindex="11"><a href="/o-nas/">O nás</a>
+<div><ul class="container"><li><a href="/o-nas/kontakty/">Kontakty</a>
+</li><li><a href="/o-nas/zakladne-udaje/">Údaje o spoločnosti</a>
+</li><li><a href="/o-nas/nas-pribeh/">Náš príbeh</a>
+</li><li><a href="/o-nas/nasa-flotila/">Naša flotila</a>
+</li><li><a href="/o-nas/bonusy-pre-cestujucich/">Zľavy u partnerov</a>
+</li><li><a href="/o-nas/virtualna-prehliadka/">Virtuálna prehliadka </a>
+</li><li><a href="/o-nas/faq/">FAQ</a>
+</li><li><a href="/o-nas/casopis-zlty/">Časopis Žltý</a>
+</li><li><a href="/o-nas/pre-media/">Pre médiá</a>
+</li><li><a href="/o-nas/influencer/">Pre influencerov</a>
+</li><li><a href="/o-nas/Inzerujte-u-nas/">Inzerujte u nás</a>
+</li><li><a href="/o-nas/galeria/">Galéria</a>
+</li>
+</ul>
+</div>
+</li><li tabindex="12"><a href="/kariera/">Kariéra</a>
+</li></ul>
+		</nav>
+	</div>
+</div>
+<script aria-hidden="true"> 
+	const newHeaderUlNavLi = document.getElementById('newHeader-nav-ul').children
+	const navLinkstoArray = [].slice.call(newHeaderUlNavLi);
+	navLinkstoArray.forEach( (each, index) => each.setAttribute("tabindex", index + 5)  )
+
+
+	if(window.location.host === "www.regiojet.sk" || window.location.host === "www.regiojet.de") { //"olymp9.sa.cz" "www.regiojet.sk"
+		const headerNav = [].slice.call( document.getElementById('newHeader-nav-ul').children )
+    
+		for (let eachNav of headerNav ) {
+
+			if(eachNav.firstChild.href.includes('https://www.regiojet.sk/kariera/')) {
+				eachNav.removeAttribute('class')
+				eachNav.addEventListener('click' ,function() {window.location = '/kariera/'} )
+			}
+			
+			if(eachNav.firstChild.href.includes('https://www.regiojet.de/kariere/')) {
+				eachNav.removeAttribute('class')
+				eachNav.addEventListener('click' ,function() {window.location = '/kariere/'} )
+			}
+		}
+	}
+	  
+
+
+</script>
+	
+
+	
+
+<!-- /header menu -->
+		</header><div id="hp-slider-ybus" class="main-hp-slider flexslider" aria-hidden="true" tabindex="-1"><ul class="slides" aria-hidden="true"><li class="iframe iframe-added" data-thumb-alt="" aria-hidden="true" tabindex="-1" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id="a64b1ea3" name="a64b1ea3" src="https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=352" frameborder="0" scrolling="no" width="1920" height="336"><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=aeb41a3c&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=352&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=aeb41a3c' border='0' alt='' /></a></iframe>
+</li><li class="iframe iframe-added flex-active-slide" data-iframe="<!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id='a1da8eb8' name='a1da8eb8' src='https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=370' frameborder='0' scrolling='no' width='1920' height='336'><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=a5c2d9ec&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=370&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a5c2d9ec' border='0' alt='' /></a></iframe>
+" data-thumb-alt="" aria-hidden="true" tabindex="-1" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id="a1da8eb8" name="a1da8eb8" src="https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=370" frameborder="0" scrolling="no" width="1920" height="336"><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=a5c2d9ec&cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=370&cb=INSERT_RANDOM_NUMBER_HERE&n=a5c2d9ec' border='0' alt='' /></a></iframe></li><li class="iframe iframe-added" data-iframe="<!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id='a7c70f83' name='a7c70f83' src='https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=371' frameborder='0' scrolling='no' width='1920' height='336'><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=a3a49ddf&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=371&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a3a49ddf' border='0' alt='' /></a></iframe>
+" data-thumb-alt="" aria-hidden="true" tabindex="-1" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id="a7c70f83" name="a7c70f83" src="https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=371" frameborder="0" scrolling="no" width="1920" height="336"><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=a3a49ddf&cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=371&cb=INSERT_RANDOM_NUMBER_HERE&n=a3a49ddf' border='0' alt='' /></a></iframe></li><li class="iframe" data-iframe="<!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id='a1bc8bf1' name='a1bc8bf1' src='https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=372' frameborder='0' scrolling='no' width='1920' height='336'><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=aab7c569&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=372&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=aab7c569' border='0' alt='' /></a></iframe>
+" data-thumb-alt="" aria-hidden="true" tabindex="-1" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"></li><li class="iframe" data-iframe="<!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id='a76306d6' name='a76306d6' src='https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=373' frameborder='0' scrolling='no' width='1920' height='336'><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=a8faedee&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=373&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a8faedee' border='0' alt='' /></a></iframe>
+" data-thumb-alt="" aria-hidden="true" tabindex="-1" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"></li></ul><ol class="flex-control-nav flex-control-paging" aria-hidden="true" tabindex="-1"><li aria-hidden="true" tabindex="-1"><a href="#" class="" aria-hidden="true" tabindex="-1">1</a></li><li aria-hidden="true" tabindex="-1"><a href="#" aria-hidden="true" tabindex="-1" class="flex-active">2</a></li><li aria-hidden="true" tabindex="-1"><a href="#" aria-hidden="true" tabindex="-1">3</a></li><li aria-hidden="true" tabindex="-1"><a href="#" aria-hidden="true" tabindex="-1">4</a></li><li aria-hidden="true" tabindex="-1"><a href="#" aria-hidden="true" tabindex="-1">5</a></li></ol></div>
+
+		<main id="content-main" class="">
+			<div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+	<div id="hp-left-col" class="col-sm-12 col-md-4">
+		<div id="hp-form-tabs">
+			<div class="tabs form-tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+				
+				<ul class="nav nav-tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+					<li class="first col-md-2 ui-state-default ui-corner-top ui-tabs-active ui-state-active" data-form-name="ybus" role="tab" tabindex="0" aria-controls="form-1" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true">
+						<a class="ui-tabs-anchor" href="#form-1" role="presentation" tabindex="-1" id="ui-id-1">
+							<i class="sa-icon icon-bus-vlak2"></i>
+							<span class="nav-text hidden-xs hidden-sm">Lístky</span>
+						</a>
+					</li>
+					
+					<li class="col-md-2 ui-state-default ui-corner-top" data-form-name="airticket" aria-hidden="true" role="tab" tabindex="-1" aria-controls="form-2" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false">
+						<a class="ui-tabs-anchor" href="#form-2" role="presentation" tabindex="-1" id="ui-id-2">
+							<i class="sa-icon icon-letadlo"></i>
+							<span class="nav-text hidden-xs hidden-sm">Letenky</span>
+						</a>
+					</li>
+					<li class="col-md-2 dovolena-li ui-state-default ui-corner-top" data-form-name="dovolena" aria-hidden="true" role="tab" tabindex="-1" aria-controls="url-dovolena" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false">
+						<a class="ui-tabs-anchor" href="#url-dovolena" role="presentation" tabindex="-1" id="ui-id-3">
+							<i class="sa-icon icon-dovolena"></i>
+							<span class="nav-text hidden-xs hidden-sm">Zájazdy</span>
+						</a>
+					</li>
+					<li class="col-md-2 dalsi-sluzby ui-state-default ui-corner-top" aria-hidden="true" role="tab" tabindex="-1" aria-controls="form-4" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false">
+						<a class="ui-tabs-anchor" href="#form-4" role="presentation" tabindex="-1" id="ui-id-4">
+							<i class="sa-icon icon-sipka-dolu"></i>
+							<span class="nav-text hidden-xs hidden-sm">Ďalšie</span>
+						</a>
+					</li>
+					
+					<!--
+					<li class="col-md-2 dalsi-sluzby">
+						<a href="#next-services">
+							<i class="sa-icon icon-sipka-dolu"></i>
+							<span class="nav-text hidden-xs hidden-sm">Ďalšie</span>
+						</a>
+					</li>
+					-->
+					
+					<!--
+					<li class="col-md-2 jazykove-pobyty-li">
+						<a href="#form-4">
+							<i class="sa-icon icon-jazykove-pobyty"></i>
+							<span class="nav-text hidden-xs hidden-sm">Jazykové pobyty</span>
+						</a>
+					</li>
+					<li class="col-md-2 pracovni-pobyty-li">
+						<a href="#form-5">
+							<i class="sa-icon icon-pracovni-pobyty"></i>
+							<span class="nav-text hidden-xs hidden-sm">Pracovní pobyty</span>
+						</a>
+					</li>
+					
+					<li class="col-md-2">
+						<a href="#form-6">
+							<i class="sa-icon icon-pojisteni"></i>
+							<span class="nav-text hidden-xs hidden-sm">Pojištění</span>
+						</a>
+					</li>
+					<li class="col-md-2">
+						<a href="#form-7">
+							<i class="sa-icon icon-ubytovani"></i>
+							<span class="nav-text hidden-xs hidden-sm">Ubytování</span>
+						</a>
+					</li>
+					<li class="col-md-2">
+						<a href="#form-8">
+							<i class="sa-icon icon-pronajem-aut"></i>
+							<span class="nav-text hidden-xs hidden-sm">Pronájem aut</span>
+						</a>
+					</li>
+					-->
+				</ul>
+				
+				<div class="tab-content">
+					<div id="form-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false"><h2 class="form-tabs-header just-regiojet">Autobusové a vlakové lístky</h2><form class="ybus-form" action="//cestovnelistky.studentagency.sk/Booking/" method="GET" name="ybus-form" novalidate="false"><div class="ybus-form-group form-group" id="ybus-trip_type-block"><label class="control-label" for="trip_type">Typ cesty</label><input class="" type="radio" name="trip_type" value="one_way" id="one_way" checked="checked"><label class="control-label" for="one_way">Jednosmerná</label><input class="" type="radio" name="trip_type" value="round_trip_ybus" id="round_trip_ybus"><label class="control-label" for="round_trip_ybus">Spiatočná</label></div><div class="ybus-form-group form-group destination-field" id="ybus-destination_from-block"><label class="control-label" for="destination_from">Odchod z</label><input class="" type="hidden" name="destination_from_short" value="" id="destination_from_short"><input class="form-control ui-autocomplete-input" type="text" name="destination_from" value="" id="destination_from" placeholder="-- vyberte miesto odjazdu --" tabindex="1" onfocus="this.placeholder=''" onblur="this.placeholder='-- vyberte miesto odjazdu --'" onclick="this.setSelectionRange(0, this.value.length);" autocomplete="off"><div class="input-addon open-modal"></div></div><div class="ybus-form-group form-group date-field" id="ybus-departure_date-block"><label class="control-label" for="departure_date">Odchod</label><input class="form-control date_picker date-undefined hasDatepicker" type="text" name="departure_date" value="15.10.2020" id="departure_date" tabindex="3"><div class="input-addon open-datepicker"></div></div><div class="ybus-form-group form-group destination-field" id="ybus-destination_to-block"><label class="control-label" for="destination_to">Príchod do</label><input class="" type="hidden" name="destination_to_short" value="" id="destination_to_short"><input class="form-control ui-autocomplete-input" type="text" name="destination_to" value="" id="destination_to" placeholder="-- vyberte miesto príjazdu --" tabindex="2" onfocus="this.placeholder=''" onblur="this.placeholder='-- vyberte miesto príjazdu --'" onclick="this.setSelectionRange(0, this.value.length);" autocomplete="off"><div class="input-addon open-modal"></div></div><div class="ybus-form-group form-group date-field" id="ybus-arrival_date-block"><label class="control-label" for="arrival_date">Návrat</label><input class="form-control date_picker date-undefined hasDatepicker" type="text" name="arrival_date" value="+ vybrať" id="arrival_date" tabindex="4"><div class="input-addon open-datepicker"></div></div><div class="ybus-form-group form-group" id="ybus-switch_arrow-block"><label class="control-label" for="switch_arrow">Obrátit pořadí stanic</label></div><div class="ybus-form-group form-group" id="ybus-tip-block"><input class="" type="checkbox" name="tip" id="tip"><label class="control-label" for="tip">Náš tip! Cestujte lacnejšie s Kreditovým lístkom</label></div><div class="ybus-form-group form-group" id="ybus-passengers-block" title="zvolte počet cestujících"><label class="control-label" for="passengers">Počet osôb</label><div class="passengers" tabindex="5"><div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span></div><div class="slider-controls"><span rel="1" class="active">1</span><span rel="2" class="">2</span><span rel="3" class="">3</span><span rel="4" class="">4</span><span rel="5" class="">5</span><span rel="6" class="">6</span></div></div></div><div class="ybus-form-group form-group" id="ybus-tariffs-block"><label class="control-label" for="">Tarif(y)</label><div><div class="tariff-block"><select class="form-control select-select" name="tariff-0" id="tariff-0" tabindex="7"><option class="" value="REGULAR">Dospelý 18-64 rokov</option><option class="" value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</option><option class="" value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</option><option class="" value="ISIC">Senior &gt;65</option><option class="" value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</option><option class="" value="DISABLED">ŤZP (ŤZP/S)</option><option class="" value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</option><option class="" value="EURO26">ISIC&gt;26/EYCA/ALIVE</option><option class="" value="CHILD">Dieťa 6-14 (mez. autobus)</option></select><div class="select select-theme-default"><div class="select-content"><ul class="select-options"><li class="select-option select-option-selected" data-value="REGULAR">Dospelý 18-64 rokov</li><li class="select-option" data-value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</li><li class="select-option" data-value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</li><li class="select-option" data-value="ISIC">Senior &gt;65</li><li class="select-option" data-value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</li><li class="select-option" data-value="DISABLED">ŤZP (ŤZP/S)</li><li class="select-option" data-value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</li><li class="select-option" data-value="EURO26">ISIC&gt;26/EYCA/ALIVE</li><li class="select-option" data-value="CHILD">Dieťa 6-14 (mez. autobus)</li></ul></div></div><a href="javascript:;" class="select-target select-theme-default" tabindex="7">Dospelý 18-64 rokov<i class="sa-icon icon-sipka-dolu2"></i></a></div><div class="tariff-block" style="display: none;"><select class="form-control select-select" name="tariff-1" id="tariff-1" tabindex="8"><option class="" value="REGULAR">Dospelý 18-64 rokov</option><option class="" value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</option><option class="" value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</option><option class="" value="ISIC">Senior &gt;65</option><option class="" value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</option><option class="" value="DISABLED">ŤZP (ŤZP/S)</option><option class="" value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</option><option class="" value="EURO26">ISIC&gt;26/EYCA/ALIVE</option><option class="" value="CHILD">Dieťa 6-14 (mez. autobus)</option></select><div class="select select-theme-default"><div class="select-content"><ul class="select-options"><li class="select-option select-option-selected" data-value="REGULAR">Dospelý 18-64 rokov</li><li class="select-option" data-value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</li><li class="select-option" data-value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</li><li class="select-option" data-value="ISIC">Senior &gt;65</li><li class="select-option" data-value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</li><li class="select-option" data-value="DISABLED">ŤZP (ŤZP/S)</li><li class="select-option" data-value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</li><li class="select-option" data-value="EURO26">ISIC&gt;26/EYCA/ALIVE</li><li class="select-option" data-value="CHILD">Dieťa 6-14 (mez. autobus)</li></ul></div></div><a href="javascript:;" class="select-target select-theme-default" tabindex="8">Dospelý 18-64 rokov<i class="sa-icon icon-sipka-dolu2"></i></a></div><div class="tariff-block" style="display: none;"><select class="form-control select-select" name="tariff-2" id="tariff-2" tabindex="9"><option class="" value="REGULAR">Dospelý 18-64 rokov</option><option class="" value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</option><option class="" value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</option><option class="" value="ISIC">Senior &gt;65</option><option class="" value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</option><option class="" value="DISABLED">ŤZP (ŤZP/S)</option><option class="" value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</option><option class="" value="EURO26">ISIC&gt;26/EYCA/ALIVE</option><option class="" value="CHILD">Dieťa 6-14 (mez. autobus)</option></select><div class="select select-theme-default"><div class="select-content"><ul class="select-options"><li class="select-option select-option-selected" data-value="REGULAR">Dospelý 18-64 rokov</li><li class="select-option" data-value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</li><li class="select-option" data-value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</li><li class="select-option" data-value="ISIC">Senior &gt;65</li><li class="select-option" data-value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</li><li class="select-option" data-value="DISABLED">ŤZP (ŤZP/S)</li><li class="select-option" data-value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</li><li class="select-option" data-value="EURO26">ISIC&gt;26/EYCA/ALIVE</li><li class="select-option" data-value="CHILD">Dieťa 6-14 (mez. autobus)</li></ul></div></div><a href="javascript:;" class="select-target select-theme-default" tabindex="9">Dospelý 18-64 rokov<i class="sa-icon icon-sipka-dolu2"></i></a></div><div class="tariff-block" style="display: none;"><select class="form-control select-select" name="tariff-3" id="tariff-3" tabindex="10"><option class="" value="REGULAR">Dospelý 18-64 rokov</option><option class="" value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</option><option class="" value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</option><option class="" value="ISIC">Senior &gt;65</option><option class="" value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</option><option class="" value="DISABLED">ŤZP (ŤZP/S)</option><option class="" value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</option><option class="" value="EURO26">ISIC&gt;26/EYCA/ALIVE</option><option class="" value="CHILD">Dieťa 6-14 (mez. autobus)</option></select><div class="select select-theme-default"><div class="select-content"><ul class="select-options"><li class="select-option select-option-selected" data-value="REGULAR">Dospelý 18-64 rokov</li><li class="select-option" data-value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</li><li class="select-option" data-value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</li><li class="select-option" data-value="ISIC">Senior &gt;65</li><li class="select-option" data-value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</li><li class="select-option" data-value="DISABLED">ŤZP (ŤZP/S)</li><li class="select-option" data-value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</li><li class="select-option" data-value="EURO26">ISIC&gt;26/EYCA/ALIVE</li><li class="select-option" data-value="CHILD">Dieťa 6-14 (mez. autobus)</li></ul></div></div><a href="javascript:;" class="select-target select-theme-default" tabindex="10">Dospelý 18-64 rokov<i class="sa-icon icon-sipka-dolu2"></i></a></div><div class="tariff-block" style="display: none;"><select class="form-control select-select" name="tariff-4" id="tariff-4" tabindex="11"><option class="" value="REGULAR">Dospelý 18-64 rokov</option><option class="" value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</option><option class="" value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</option><option class="" value="ISIC">Senior &gt;65</option><option class="" value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</option><option class="" value="DISABLED">ŤZP (ŤZP/S)</option><option class="" value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</option><option class="" value="EURO26">ISIC&gt;26/EYCA/ALIVE</option><option class="" value="CHILD">Dieťa 6-14 (mez. autobus)</option></select><div class="select select-theme-default"><div class="select-content"><ul class="select-options"><li class="select-option select-option-selected" data-value="REGULAR">Dospelý 18-64 rokov</li><li class="select-option" data-value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</li><li class="select-option" data-value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</li><li class="select-option" data-value="ISIC">Senior &gt;65</li><li class="select-option" data-value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</li><li class="select-option" data-value="DISABLED">ŤZP (ŤZP/S)</li><li class="select-option" data-value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</li><li class="select-option" data-value="EURO26">ISIC&gt;26/EYCA/ALIVE</li><li class="select-option" data-value="CHILD">Dieťa 6-14 (mez. autobus)</li></ul></div></div><a href="javascript:;" class="select-target select-theme-default" tabindex="11">Dospelý 18-64 rokov<i class="sa-icon icon-sipka-dolu2"></i></a></div><div class="tariff-block" style="display: none;"><select class="form-control select-select" name="tariff-5" id="tariff-5" tabindex="12"><option class="" value="REGULAR">Dospelý 18-64 rokov</option><option class="" value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</option><option class="" value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</option><option class="" value="ISIC">Senior &gt;65</option><option class="" value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</option><option class="" value="DISABLED">ŤZP (ŤZP/S)</option><option class="" value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</option><option class="" value="EURO26">ISIC&gt;26/EYCA/ALIVE</option><option class="" value="CHILD">Dieťa 6-14 (mez. autobus)</option></select><div class="select select-theme-default"><div class="select-content"><ul class="select-options"><li class="select-option select-option-selected" data-value="REGULAR">Dospelý 18-64 rokov</li><li class="select-option" data-value="CZECH_STUDENT_PASS_15">Dieťa a mládež 6 - &lt;18</li><li class="select-option" data-value="CZECH_STUDENT_PASS_26">Student &lt;26 (žiak. Preukaz/ISIC)</li><li class="select-option" data-value="ISIC">Senior &gt;65</li><li class="select-option" data-value="ATTENDED_CHILD">Dieťa 0-6 s doprovodom</li><li class="select-option" data-value="DISABLED">ŤZP (ŤZP/S)</li><li class="select-option" data-value="DISABLED_ATTENDANCE">Sprievodca ŤZP/S</li><li class="select-option" data-value="EURO26">ISIC&gt;26/EYCA/ALIVE</li><li class="select-option" data-value="CHILD">Dieťa 6-14 (mez. autobus)</li></ul></div></div><a href="javascript:;" class="select-target select-theme-default" tabindex="12">Dospelý 18-64 rokov<i class="sa-icon icon-sipka-dolu2"></i></a></div></div></div><div class="ybus-form-group form-group" id="ybus-destination_from_id-block"><input class="form-control" type="hidden" name="destination_from_id" value="" id="destination_from_id"></div><div class="ybus-form-group form-group" id="ybus-destination_to_id-block"><input class="form-control" type="hidden" name="destination_to_id" value="" id="destination_to_id"></div><div class="form-submit"><button type="submit" class="ybus-form-submit" tabindex="13">Vyhľadať</button></div><div class="ybus-form-group form-group hide" id="ybus-saved_routes-block"><label class="control-label" for="saved_routes">Vaše posledné vyhľadávanie</label></div><div class="clearfix"></div></form></div>
+					<div id="form-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;"><div class="text-center loader"><div class="sa-preloader"><div class="preloader"></div></div></div></div>
+					<div id="form-3"><div class="text-center loader"><div class="sa-preloader"><div class="preloader"></div></div></div></div>
+					<div id="form-4" aria-labelledby="ui-id-4" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;"><div class="text-center loader"><div class="sa-preloader"><div class="preloader"></div></div></div></div>
+					<!--
+					<div id="next-services" class="hide">
+						<h2 class="form-tabs-header hidden-lg">Ďalšie služby</h2>
+						<ul>
+							<li class="item accomodation">
+								<a href="http://ubytovanie.regiojet.sk?utm_source=regiojet.sk&utm_campaign=ubytovani&utm_medium=top-form">
+									<div class="header-img"></div>
+									<strong>Ubytovanie</strong>
+								</a>
+							</li>
+							<li class="item rentcar">
+								<a href="http://www.rentalcars.com/?affiliateCode=regiojet_cz&adplat=regiojet_sk">
+									<div class="header-img"></div>
+									<strong>Prenájom áut</strong>
+								</a>
+							</li>
+							<li class="item insurance">
+								<a href="/poistenie?utm_source=regiojet.sk&utm_campaign=pojisteni&utm_medium=top-form/">
+									<div class="header-img"></div>
+									<strong>Poistenie</strong>
+								</a>
+							</li>
+							<li class="item taxi">
+								<a href="http://www.ticktack.cz?utm_source=regiojet.sk&utm_campaign=taxi&utm_medium=top-form">
+									<div class="header-img"></div>
+									<strong>Taxi v Prahe</strong>
+								</a>
+							</li>
+							<li class="item working-abroad">
+								<a href="http://www.pracovnipobyty.cz?utm_source=regiojet.sk&utm_campaign=pracaky&utm_medium=top-form/">
+									<div class="header-img"></div>
+									<strong>Pracovné a <br /> au pair pobyty</strong>
+								</a>
+							</li>
+							<li class="item study-abroad">
+								<a href="http://www.jazykovepobyty.cz?utm_source=regiojet.sk&utm_campaign=jazykace&utm_medium=top-form/">
+									<div class="header-img"></div>
+									<strong>Jazykové pobyty v zahraničí</strong>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+					-->
+					
+					<!--<div id="form-4"><div class='text-center loader'><div class="sa-preloader"><div class="preloader"></div></div></div></div>-->
+					<!--<div id="form-5"><div class='text-center loader'><div class="sa-preloader"><div class="preloader"></div></div></div></div>-->
+					<!--<div id="form-6"><div class='text-center loader'><div class="sa-preloader"><div class="preloader"></div></div></div></div>-->
+					<!--<div id="form-7"><div class='text-center loader'><div class="sa-preloader"><div class="preloader"></div></div></div></div>-->
+					<!--<div id="form-8"><div class='text-center loader'><div class="sa-preloader"><div class="preloader"></div></div></div></div>-->
+				</div>
+				
+			</div>
+		</div>
+
+        
+		<script aria-hidden="true">
+            window.formDirectData = {	ybusForm: {"options":{"urls":{"submit":"//cestovnelistky.studentagency.sk/Booking/","destinations":"https://www.studentagency.cz/data/wc/ybus-form/"},"maxPassengers":6,"messages":{"btn_submit":"Vyhľadať"},"lang":"sk","submitTabindex":13,"tariffs":[{"name":"Dospelý 18-64 rokov","value":"REGULAR"},{"name":"Dieťa a mládež 6 - <18","value":"CZECH_STUDENT_PASS_15"},{"name":"Student <26 (žiak. Preukaz/ISIC)","value":"CZECH_STUDENT_PASS_26"},{"name":"Senior >65","value":"ISIC"},{"name":"Dieťa 0-6 s doprovodom","value":"ATTENDED_CHILD"},{"name":"ŤZP (ŤZP/S)","value":"DISABLED"},{"name":"Sprievodca ŤZP/S","value":"DISABLED_ATTENDANCE"},{"name":"ISIC>26/EYCA/ALIVE","value":"EURO26"},{"name":"Dieťa 6-14 (mez. autobus)","value":"CHILD"}]},"fields":[{"position":1,"label":"Typ cesty","id":"trip_type","type":"trip_type","fields":[{"checked":"checked","label":"Jednosmerná","type":"radio","value":"one_way"},{"label":"Spiatočná","type":"radio","value":"round_trip_ybus"}]},{"def":"","def-commented":"Praha","selectOnClick":true,"tabindex":1,"position":2,"label":"Odchod z","id":"destination_from","placeholder":"-- vyberte miesto odjazdu --","type":"destination","urlParam":"from"},{"def":"15.10.2020","readonly":"true","tabindex":3,"position":3,"label":"Odchod","id":"departure_date","type":"date"},{"def":"","def-commented":"Praha","selectOnClick":true,"tabindex":2,"position":4,"label":"Príchod do","id":"destination_to","placeholder":"-- vyberte miesto príjazdu --","type":"destination","urlParam":"to"},{"def":"+ vybrať","readonly":"true","tabindex":4,"position":5,"label":"Návrat","id":"arrival_date","type":"date"},{"position":6,"label":"Obrátit pořadí stanic","id":"switch_arrow","type":"switch_arrow"},{"position":7,"label":"Náš tip! Cestujte lacnejšie s Kreditovým lístkom","id":"tip","type":"checkbox"},{"def":1,"tabindex":5,"position":8,"label":"Počet osôb","id":"passengers","type":"passengers"},{"def":["REGULAR"],"tabindex":6,"position":9,"label":"Tarif(y)","type":"tariffs"},{"position":11,"label":"Vaše posledné vyhľadávanie","id":"saved_routes","type":"saved_routes"},{"def":"","position":12,"id":"destination_from_id","type":"hidden"},{"def":"","position":13,"id":"destination_to_id","type":"hidden"}]}
+}   
+		</script>	
+		
+		<div id="offers-under-slider" class="flexslider">
+			<ul class="slides"><li class="item"><!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id="a9fcda8f" name="a9fcda8f" src="https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=350" frameborder="0" scrolling="no" width="233" height="153"><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=ab427296&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=350&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ab427296' border='0' alt='' /></a></iframe>
+</li><li class="item"><!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id="acd09f4b" name="acd09f4b" src="https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=362" frameborder="0" scrolling="no" width="233" height="153"><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=aceaf27c&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=362&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=aceaf27c' border='0' alt='' /></a></iframe>
+</li><li class="item"><!--/* Revive Adserver iFrame Tag v3.0.2 */-->
+
+<!--/*
+  * This tag has been generated for use on a non-SSL page. If this tag
+  * is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  * to
+  *   'https://brn-ads.sa.cz/www/delivery/...'
+  *
+  * If iFrames are not supported by the viewer's browser, then this
+  * tag only shows image banners. There is no width or height in these
+  * banners, so if you want these tags to allocate space for the ad
+  * before it shows, you will need to add this information to the <img>
+  * tag.
+  */-->
+
+<iframe id="ad4105b3" name="ad4105b3" src="https://brn-ads.sa.cz/sa/export/export_frame.php?cb=INSERT_RANDOM_NUMBER_HERE&amp;zoneid=363" frameborder="0" scrolling="no" width="233" height="153"><a href='https://brn-ads.sa.cz/www/delivery/ck.php?n=a5171f30&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='https://brn-ads.sa.cz/www/delivery/avw.php?zoneid=363&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a5171f30' border='0' alt='' /></a></iframe>
+</li></ul>
+		</div>
+		
+		<div id="ticket-login" style="display: none;">
+			<div class="ticket-login-header">
+				<h2><a class="credit-ticket-link" href="https://cestovnelistky.regiojet.sk/Login">Kreditový lístok</a></h2> 
+				<a href="https://cestovnelistky.regiojet.sk/Login">Otvorený lístok</a>
+			</div>
+			<form id="ticketFormLogin" action="" method="post">
+				<div class="ticket-login-body">
+					<div class="field-wrap">
+						<label for="ticketNumber">Číslo lístka</label>
+						<input id="ticketNumber" name="passwordAccountCode" autocomplete="username" class="question-mark-background" type="text">
+					</div>
+
+					<div class="field-wrap">
+						<label for="ticketPassword">Heslo</label>
+						<input id="ticketPassword" name="password" type="password">
+					</div>
+					
+					<a class="forgotten-password" href="https://cestovnelistky.regiojet.sk/PasswordRequest">Zabudli ste heslo?</a>
+					<button type="submit" name="loginButton">Prihlásiť</button>
+				</div>
+				<div class="ticket-login-footer">
+					<p>Nemáte Kreditový lístok?<br><a href="https://cestovnelistky.regiojet.sk/CreateAccount?1">Zaregistrujte sa</a> a získate výhodnejšie ceny.</p>
+				</div>
+				
+				<a class="poridit-zdarma" href="https://cestovnelistky.regiojet.sk/CreateAccount">Zriadiť zadarmo</a>
+				
+				<img class="stevardka" alt="stevardka" src="/sys/images/stevardka.png">
+		  	</form>
+		</div>
+		
+		<!--<a id="back-to-old-page-link" href="https://www.regiojet.cz/"><img src="https://www.regiojet.cz/opencms/export/sites/regiojet.cz/sys/images/new-hp/zpet-sk.jpg" alt="Zpět na starou verzi"></a>	-->
+		
+<!-- na nove page regiojet/new skryje ticket-login, nahradi jej img s odkazem na stary web -->
+		<script type="text/javascript" aria-hidden="true">
+			if ($('body').hasClass('homepage-new') === true) {
+			console.log('hiding');
+				$('#ticket-login').hide();
+			}
+		</script>
+		
+		<!--
+		<a href="/nase-trasy/index.html" id="show-map-under-ticket">
+			<h2>Mapa našich liniek</h2>
+			<button class="button red" type="button">Zobraziť mapu</button>
+		</a>
+		-->
+	</div>
+	
+	
+	<div id="hp-news" class="col-xs-12">
+
+<!--
+		<a class="hp-delay-mobile hidden-sm hidden-md hidden-lg" href="https://www.regiojet.sk/novinky-z-trate/" target="_blank">
+			<h2>Informácie o meškaní</h2>
+			<strong>Aktuálne informácie o pohybe vlakov a autobusov</strong>
+			<i class="sa-icon icon-hodiny"></i>
+		</a>
+-->		
+				
+		
+		<div class="hp-news">
+			<div class="row">
+				<div class="col-xs-12 col-sm-2" style="text-align: center;">
+					<h2><a href="/novinky/">Novinky</a></h2>
+				</div>
+				<div class="col-xs-12 col-sm-10">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6"><a href="/novinky/vlaky/slovensko_jazdime_dalej.html" class="item train"><h3><span>Na Slovensko jazdíme ďalej!</span><i class="sa-icon icon-vlak"></i></h3><p>Pred zavedením karanténnych opatrení posilňujeme spojenie tak, aby všetci, ktorí sa potrebujú dostať domov a za svojimi blízkymi, mohli využiť vlakov RegioJet.</p></a></div><div class="col-xs-12 col-sm-6"><a href="/novinky/vlaky/thermalpass_.html" class="item train"><h3><span>OPATRENIA VLÁDY: POZASTAVENIE PREDAJA PONUKY THERMALPASS</span><i class="sa-icon icon-vlak"></i></h3><p>Vážení cestujúci z dôvodu opatrení vydaných vládou SR sme nútení pozastaviť ponuku Thermalpass. </p></a></div><div class="col-xs-12 col-sm-6"><a href="/novinky/autobusy/2020-03-01-cesko-slovensko-madarsko.html" class="item bus"><h3><span>Od 1. 3. 2020 vás po novom dovezieme na autobusovú stanicu Budapešť-Népliget</span><i class="sa-icon icon-bus"></i></h3><p>Budapešť-Népliget aut.áll. je nová zastávka linky Praha–Brno–Bratislava–Budapešť. Dovezieme vás priamo do centra mesta. Budapeštiansku MHD nájdete hneď cez ulicu.</p></a></div><div class="col-xs-12 col-sm-6"><a href="/novinky/vlaky/bratislava_zilina_2019.html" class="item train"><h3><span>RegioJet po novom na vlakovej linke Žilina – Bratislava – Brno – Praha</span><i class="sa-icon icon-vlak"></i></h3><p>Už od 15. 12. 2019 sa môžete tešiť na nové, priame vlakové spojenie Žiliny s metropolou Južnej Moravy – Brnom!
+Žlté vlaky začnú spájať západoslovenské mestá za najlepšie ceny a s vysoko komfortným servisom na palube.</p></a></div><a class="show-more-news" href="/novinky/">Viacero noviniek</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="services-block" class="col-xs-12">
+
+<!--
+		<a id="hp-delay" href="https://www.regiojet.sk/novinky-z-trate/" target="_blank">
+			<h2>Informácie o meškaní</h2>
+			<strong>Aktuálne informácie o pohybe vlakov a autobusov</strong>
+			<i class="sa-icon icon-hodiny"></i>
+		</a>
+-->	
+
+		<div class="hp-offer-services">
+			<div class="row">
+				<div class="hidden-xs col-sm-4" title="mapa našich linek">
+					<a href="/nase-trasy/mapa/"><img src="/sys/images/RJ_web_mapa_linek.jpg" alt="mapa našich linek"></a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+<!-- NEW BANNER ZPOZDENI -->	
+					<div id="banner-delay">
+						<div class="bnr-delay">
+							<h2 class="banner-delay-nadpis"><a id="news-url" href="/aktualne-na-zelezniciach-a-cestach/">Aktuálne na železniciach a cestách</a></h2> <!-- /novinky-z-trate/ -->	
+								<ul>
+<li><a href="/aktualne-na-zelezniciach-a-cestach/autobusy/aktualita-11.html"><i class="sa-icon icon-sipka-prava-strankovani"></i>Možné MEŠKANIA autobusov do/z Viedne a Ríma</a></li>
+<li><a href="/aktualne-na-zelezniciach-a-cestach/autobusy/zmena-zastavky-17.html"><i class="sa-icon icon-sipka-prava-strankovani"></i>Presun zastávky Berlín - letisko Schönefeld od 1.6.2020</a></li>
+
+	
+								</ul>
+						</div>		
+					</div>
+<!-- NEW BANNER ZPOZDENI END -->
+				</div>
+				<div class="col-xs-12 col-sm-4 hp-offer-services-delay-banner" title="informace o spoždění">
+					 <a href="/novinky-z-trate/"><img src="/opencms/export/sites/regiojet.sk/sys/images/RJ_web_zpozdeni.jpg" alt="informace o spoždění"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<script aria-hidden="true">
+	const newsUrl = document.getElementById("news-url");
+	const locationHost = window.location.host;
+	
+	let href;
+	switch(locationHost) {
+		case "www.regiojet.cz":
+			href = "/aktualne-na-tratich-a-silnicich/";
+			break;
+		case "www.regiojet.com":
+			href = "/currently-on-railways-and-routes/";
+			break;
+		case "www.regiojet.sk":
+			href = "/aktualne-na-zelezniciach-a-cestach/";
+			break;
+		case "www.regiojet.de":
+			href = "/aktuelles-auf-schienen-und-strassen/";
+			break;
+		case "www.regiojet.at":
+			href = "/aktuelles-auf-schienen-und-strassen/";
+			break;
+		default:
+			href = "/aktualne-na-tratich-a-silnicich/";
+	}
+	
+	newsUrl.setAttribute("href", href);
+	
+</script>
+	
+</div>
+
+
+
+
+
+			</div>
+		</main>
+<section id="content-bottom">
+
+
+
+<div id="hp-offers" class="block-items container mounted">
+	<div class="hp-offers-preloader">
+		<h2>Vyčkajte prosím, načítame pre vás ponuky</h2>
+		<div class="text-center loader"><div class="sa-preloader"><div class="preloader"></div></div></div>
+	</div>
+	<div class="items">
+
+
+<div class="row">
+	<a href="/servis/sluzby-vo-vlaku/" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice1_servisvlak.jpg" alt="Pozice1_servisvlak.jpg"><h2><span>Servis na palube</span><strong>žltých vlakov</strong></h2></a><a href="/servis/sluzby-v-autobusoch/" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice2_servisbus.jpg" alt="Pozice2_servisbus.jpg"><h2><span>Servis na palube</span><strong>žltých autobusov</strong></h2></a><a href="/servis/stevardi/" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice3_Stevardka.jpg" alt="Pozice3_Stevardka.jpg"><h2><span>Stevardka</span><strong>na palube</strong></h2></a><a href="/nase-trasy/bratislava-komarno/index.html" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice4_linka_Komarno.jpg" alt="Pozice4_linka_Komarno.jpg"><h2><span>Bratislava - Dunajská Streda - Komárno</span><strong>regionálna vlaková linka</strong></h2></a><a href="/s-nami-do-ceska.html" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice5_vylety_cz.jpg" alt="Pozice5_vylety_cz.jpg"><h2><span>Výlety do Česka</span><strong>za najlepšie ceny</strong></h2></a><a href="/akciove-ponuky/akcia-medzinarodne-autobusove-cestovne-listky-regiojet-akcna-europa-last-minute.html" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice6_vylety_evropa.jpg" alt="Pozice6_vylety_evropa.jpg"><h2><span>Výlety po Európe </span><strong>už od 4,9 €</strong></h2></a><a href="https://cestovnelistky.regiojet.sk/Booking/from/10202001/to/10202091/tarif/REGULAR/return/false" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice7_cestovaniskupin.jpg" alt="Pozice7_cestovaniskupin.jpg"><h2><span>Z Bratislavy do Budapešti</span><strong>už od 6,5 €</strong></h2></a><a href="https://cestovnelistky.regiojet.sk/Booking/from/BRATISLAVA/to/NITRA/tarif/REGULAR/credit/true" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice8_75ky.jpg" alt="Pozice8_75ky.jpg"><h2><span>Z Bratislavy do Nitry </span><strong>už od 3,5 €</strong></h2></a><a href="http://letenky.regiojet.sk" class="item col-lg-4 col-md-4 col-sm-6 col-xs-6"><img aria-hidden="true" src="/.config/hp-bannery-s-nami/Pozice9_letenky.jpg" alt="Pozice9_letenky.jpg"><h2><span>Letenky do celého sveta</span><strong>s RegioJetom</strong></h2></a>
+</div>
+</div>
+</div><div id="hp-services" class="container bordered-top">
+	<div class="row">
+		<a href="/servis/" class="item col-lg-2 col-md-2 col-sm-4 col-xs-4">
+			<i class="sa-icon icon-sluzby-na-palube"></i>
+			<strong>Servis na palube</strong>
+		</a>
+
+		<a href="/aplikacia/" class="item col-lg-2 col-md-2 col-sm-4 col-xs-4">
+			<i class="sa-icon icon-zobrazeni-mobil"></i>
+			<strong>Mobilná aplikácia</strong>
+		</a>
+		
+		<a href="/prenajom-vozidiel/firemny-kreditovy-cestovny-listok/" class="item col-lg-2 col-md-2 col-sm-4 col-xs-4">
+			<i class="sa-icon icon-letenky_nejlevnejsi-letenky"></i>
+			<strong>Firemný Kreditový lístok</strong>
+		</a>
+
+		<a href="/servis/sluzby-vo-vlaku/#fragment-9" class="item col-lg-2 col-md-2 col-sm-4 col-xs-4">
+			<i class="sa-icon icon-zabavni-portal"></i>
+			<strong>Zábavný portál</strong>
+		</a>
+
+		<a href="/prenajom-autobusov/" class="item col-lg-2 col-md-2 col-sm-4 col-xs-4">
+			<i class="sa-icon icon-pronajem-autobusu"></i>
+			<strong>Prenájom autobusov</strong>
+		</a>
+
+		<a href="/ceny-a-listky/sposob-platby/" class="item col-lg-2 col-md-2 col-sm-4 col-xs-4">
+			<i class="sa-icon icon-platby"></i>
+			<strong>Spôsoby platby</strong>
+		</a>
+
+	</div>
+</div>
+
+
+</section>
+
+		<footer id="footer">
+
+
+
+
+		<div class="wrapper">
+
+			<div class="container">
+
+				<div class="top clearfix">
+
+					<div class="footer-logo">
+						<a href="/">
+							<img src="/sys/images/footer-logo-regiojet.svg" alt="RegioJet logo">
+						</a>
+					</div>
+
+					<div class="contact-info">
+
+						<div class="tel">
+							<i class="sa-icon icon-telefon pull-left"></i>
+							<span><a href="tel:+421 2 2050 2020">+421 2 2050 2020</a></span>
+						</div>
+
+						<div class="e-mail">
+							<i class="sa-icon icon-email pull-left"></i>
+							<span><a href="mailto:info@regiojet.sk">info@regiojet.sk</a></span>
+						</div>
+
+					</div>
+					
+					<div class="socials">
+
+						<a href="https://www.facebook.com/regiojetslovensko" target="_blank">
+							<span class="icon-bg">
+								<i class="sa-icon icon-facebook"></i>
+							</span>
+						</a>
+
+						<a href="https://twitter.com/regiojet" target="_blank">
+							<span class="icon-bg">
+								<i class="sa-icon icon-twitter"></i>
+							</span>
+						</a>
+
+					
+					<!--  <a href="https://plus.google.com/+RegioJet/posts" target="_blank">
+							<span class="icon-bg">
+								<i class="sa-icon icon-google-plus"></i>
+							</span>
+						</a> -->
+
+						<a href="https://cz.linkedin.com/company/regiojet-a-s-" target="_blank">
+							<span class="icon-bg">
+								<i class="sa-icon icon-linkedin"></i>
+							</span>
+						</a>
+						
+						<a href="https://instagram.com/regiojet/" target="_blank">
+							<span class="icon-bg">
+								<i class="sa-icon icon-instagram"></i>
+							</span>
+						</a>
+						
+						
+
+					</div>
+				</div>
+
+				<div class="middle clearfix">
+
+					<div class="footer-nav clearfix">
+						<div class="">
+							<ul>
+								<li><a href="/.config/menus/footer/o-nas">O nás</a></li><li><a href="/.config/menus/footer/prepravny-rad">Prepravný poriadok</a></li><li><a href="/.config/menus/footer/casopis-zluty">Časopis Žltý</a></li><li><a href="/.config/menus/footer/dokumenty">Dokumenty</a></li><li><a href="/.config/menus/footer/fotogalerie">Fotogaléria</a></li><li><a href="/.config/menus/footer/inzerce">Inzercia</a></li><li><a href="/.config/menus/footer/kariera" target="_blank">Kariéra</a></li><li><a href="/.config/menus/footer/mapa-stranek">Mapa stránok</a></li><li><a href="/.config/menus/footer/mobilni-aplikace" target="_blank">Mobilná aplikácia</a></li><li><a href="/.config/menus/footer/pro-media">Pre médiá</a></li><li><a href="/.config/menus/footer/virtualni-prohlidka">Virtuálna prehliadka</a></li>	
+							</ul>
+							
+						</div>
+					</div>
+					
+					
+					
+					
+					<div class="payment-methods clearfix">
+						<!--
+							<h2>Platobné metódy v EUR</h2>
+							<img src='/shared/data/payment-methods/account.png' alt='account'><img src='/shared/data/payment-methods/gpe-online-card-diners.png' alt='gpe-online-card-diners'><img src='/shared/data/payment-methods/gpe-online-card-maestro.png' alt='gpe-online-card-maestro'><img src='/shared/data/payment-methods/gpe-online-card-mastercard.png' alt='gpe-online-card-mastercard'><img src='/shared/data/payment-methods/gpe-online-card-visa-e.png' alt='gpe-online-card-visa-e'><img src='/shared/data/payment-methods/gpe-online-card-visa.png' alt='gpe-online-card-visa'><img src='/shared/data/payment-methods/sporopay.png' alt='sporopay'><img src='/shared/data/payment-methods/sk_vub.png' alt='sk_vub'><img src='/shared/data/payment-methods/sk_unicredit.png' alt='sk_unicredit'><img src='/shared/data/payment-methods/sk-tatra.png' alt='sk-tatra'>
+						-->
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="top clearfix">
+
+				<a href="https://studentagency.cz/" target="_blank">
+					<img src="/opencms/export/sites/regiojet.sk/sys/images/footer-logo-sa.png" alt="StudentAgency logo">
+				</a>
+
+				<ul id="footer-products">
+					<li><a href="/.config/menus/footer-products/autobusy">AUTOBUSY</a></li><li><a href="/.config/menus/footer-products/dovolena" target="_blank">DOVOLENÁ</a></li><li><a href="/.config/menus/footer-products/jazykove-pobyty" target="_blank">JAZYKOVÉ POBYTY</a></li><li><a href="/.config/menus/footer-products/letenky" target="_blank">LETENKY</a></li><li><a href="/.config/menus/footer-products/pracovni-a-au-pair-pobyty" target="_blank">PRACOVNÉ A AU PAIR POBYTY</a></li><li><a href="/.config/menus/footer-products/vlaky">VLAKY</a></li>
+				</ul>
+
+			</div>
+
+			<div class="bottom row">
+
+					<div class="col-md-10 col-xs-12 footer-left footer-copyright">
+						<span class="footer-copy-content">Copyright&nbsp;©&nbsp;2020 REGIOJET&nbsp;&nbsp;a.s. Všetky práva vyhradené.</span>
+						
+						<div class="row">
+							<ul id="footer-only-cz-ul" class="col-xs-12 col-md-8">
+								<li class="footer-copy-item">
+									<a href="/mapa-stranok.html" title="Mapa stránok">Mapa stránok</a>
+								</li>
+								
+								<li class="footer-copy-item">
+									<a href="/dokumenty/prepravny-poriadok/index.html" title="Obchodné podmienky">Obchodné podmienky</a>
+								</li>
+								
+								<li class="footer-copy-item">
+									<a href="/podmienky-pouzivania-cookies.html" title="Podmienky používania cookies">Podmienky používania cookies</a>
+								</li>
+								
+								<li class="footer-copy-item">
+									<a href="/privacy-policy.html" title="Zásady ochrany osobných údajov">Zásady ochrany osobných údajov</a>
+								</li>
+								<li id="footer-only-cz-list" class="footer-copy-item" style="display: none;">
+									<a href="https://www.regiojet.cz/dokumenty/prohlaseni-o-pristupnosti.html" title="Prohlášení o přístupnosti webu">Prohlášení o přístupnosti webu</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="footer-toggle-device col-md-2 col-xs-12 footer-right text-right">
+						<div>
+							<span>Zobrazenie</span> 
+	
+							<a href="#" data-type="desktop">
+								<i class="sa-icon icon-zobrazeni-desktop"></i>
+							</a>
+	
+							<a href="#" data-type="mobile">
+								<i class="sa-icon icon-zobrazeni-mobil"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+	
+		</div>
+		
+
+
+
+<script aria-hidden="true">
+
+const windowLocation = window.location.host
+const footerList = document.getElementById('footer-only-cz-list')
+const footerUl = document.getElementById('footer-only-cz-ul')
+//www.regiojet.cz , olymp9.sa.cz
+if( windowLocation === "www.regiojet.cz" ) { 
+	footerList.style.display = 'block'
+} else {
+	footerList.style.display = 'none'
+	footerUl.classList.add("col-md-8");
+}
+
+
+function ready(callbackFunc) {
+  if (document.readyState !== 'loading') {
+    // Document is already ready, call the callback directly
+    callbackFunc();
+  } else if (document.addEventListener) {
+    // All modern browsers to register DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', callbackFunc);
+  } else {
+    // Old IE browsers
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState === 'complete') {
+        callbackFunc();
+      }
+    });
+  }
+}
+
+ready(function() {
+  	const scripts = document.getElementsByTagName('script')
+	const scriptsToArray = [].slice.call(scripts)
+	
+	const nonScripts = document.getElementsByTagName('noscript')
+	const nonScriptsToArry = [].slice.call(nonScripts)
+
+	scriptsToArray.forEach( each => each.setAttribute('aria-hidden', true))
+	nonScriptsToArry.forEach( each => each.setAttribute('aria-hidden', true))
+	
+});
+
+
+var observer = new MutationObserver(function (m) {
+	
+	if(document.getElementById('hp-slider-ybus') !== null) {
+		
+		let Slider = document.getElementById('hp-slider-ybus')
+		
+		Slider.setAttribute("aria-hidden", true)
+		Slider.setAttribute("tabindex", "-1")
+		
+		let lists = Slider.getElementsByTagName('li')
+		let listsToArray = [].slice.call(lists)
+		listsToArray.forEach( each => {
+			each.setAttribute('aria-hidden', true)
+			each.setAttribute("tabindex", "-1")
+		})
+		
+		let olList = Slider.getElementsByTagName('ol')[0].children
+		let olListToArray = [].slice.call(olList)
+		olListToArray.forEach( each => {
+			each.firstChild.setAttribute('aria-hidden', true)
+			each.firstChild.setAttribute("tabindex", "-1")
+		})
+		
+		
+		let OlListOfA = Slider.getElementsByTagName('ol')[0].getElementsByTagName('a')
+		let OlListOFaToArray = [].slice.call(OlListOfA)
+		OlListOFaToArray.forEach( each => {
+			each.setAttribute('aria-hidden', true)
+			each.setAttribute("tabindex", "-1")
+		})
+		
+		Slider.getElementsByTagName('ol')[0].setAttribute('aria-hidden', true)
+		Slider.getElementsByTagName('ol')[0].setAttribute("tabindex", "-1")
+		Slider.getElementsByClassName('slides')[0].setAttribute('aria-hidden', true)
+		document.getElementById('ybus-passengers-block').setAttribute('title', 'zvolte počet cestujících')
+	}			
+			
+});
+observer.observe(document.body, {childList: true});
+
+
+
+
+
+
+
+
+$(document).ready( function() {
+
+if (
+document.getElementById('departure_date') !== null &&
+document.getElementById('arrival_date') !== null &&
+document.getElementById('ui-datepicker-div') !== null
+) {
+
+
+const departureDate = document.getElementById('departure_date')
+const arrivaldate = document.getElementById('arrival_date')
+const uiDatePicker = document.getElementById('ui-datepicker-div')
+
+departureDate.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+	uiDatePicker.style.display = "none";
+	departureDate.blur()
+  }
+});
+
+arrivaldate.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+	uiDatePicker.style.display = "none";
+	departureDate.blur()
+  }
+});
+
+departureDate.removeAttribute("readonly")
+arrivaldate.removeAttribute("readonly")
+
+}
+})
+
+
+
+</script></footer>
+  	<script src="/sys/js/tether.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/sys/js/select.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/sys/js/modernizr-custom.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/sys/js/flexslider.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/jquery.ui.datepicker-sk.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/wc/components.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/wc/cookie-banner/cookie-banner.js?id=regiojet.sk&amp;sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="https://www.google.com/recaptcha/api.js?onload=grecaptchaOnloadCallback&amp;render=explicit" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/sys/js/global.js?v=0.1&amp;sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/gamma/modernizr.custom.70736.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/gamma/jquery.masonry.min.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/gamma/jquery.history.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/gamma/js-url.min.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/gamma/jquerypp.custom.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/shared/js/gamma/gamma.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" type="text/javascript" aria-hidden="true"></script> 
+
+  	<script src="/sys/js/homepage.js?sa-version=1602769622113" type="text/javascript" aria-hidden="true"></script><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-5" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 432.667px; left: 148.333px; z-index: 21; display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="<Predchádzajúci"><span class="ui-icon ui-icon-circle-triangle-w">&lt;Predchádzajúci</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Nasledujúci>"><span class="ui-icon ui-icon-circle-triangle-e">Nasledujúci&gt;</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Október</span>&nbsp;<span class="ui-datepicker-year">2020</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col"><span title="Pondelok">Po</span></th><th scope="col"><span title="Utorok">Ut</span></th><th scope="col"><span title="Streda">St</span></th><th scope="col"><span title="Štvrtok">Št</span></th><th scope="col"><span title="Piatok">Pia</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Sobota">So</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Nedeľa">Ne</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">28</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">29</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">30</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td><td class="  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default ui-state-highlight" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">16</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">17</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">18</a></td></tr><tr><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default ui-state-active ui-state-hover" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">23</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">24</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">25</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2020"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default ui-priority-secondary" href="#">1</a></td></tr></tbody></table><div class="ui-datepicker-buttonpane ui-widget-content"><button type="button" class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all" data-handler="today" data-event="click">Dnes</button><button type="button" class="ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all" data-handler="hide" data-event="click">Zavrieť</button></div></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-6" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span> 
+
+
+
+		
+
+
+    
+
+<div class="container-cookiesBar">     <div class="wrap">       <div class="cookiebar-text-block">Tento web používa cookies na dosiahnutie potrebnej funkcionality. Ďalším jeho použitím s tým súhlasíte.         <a class="cookiebar-more-link" href="/podmienky-pouzivania-cookies.html">Viac informácií</a>       </div>       <div class="cookiebar-button-block">         <a class="cookiebar-accept-button" href="javascript:void(0)">Rozumiem</a>       </div>     </div>   </div>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","881218328599174");fbq("init","155504571733986");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=881218328599174&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="gtm-scroll-tracking">(function(c){function d(a){if(!(this instanceof d))return new d(a);a=a||{};var b=a.context||"body";"string"===typeof b&&(b=h.querySelector(b));if(!b)throw Error("Unable to find context "+b);this._context=b;this.minHeight=a.minHeight||0;this._marks={};this._tracked={};this._config={percentages:{each:{},every:{}},pixels:{each:{},every:{}},elements:{each:{},every:{}}};a=n(this._checkDepth.bind(this),500);b=this._update.bind(this);var g=n(b,500);c.addEventListener("scroll",a,!0);c.addEventListener("resize",
+g);this._artifacts={timer:q(b),resize:g,scroll:a}}function r(a){return a.handlers.map(function(b){return b.bind(this,{data:{depth:a.depth,label:a.label}})})}function p(a){var b=Math.floor(a.numerator/a.n),g;for(g=1;g<=b;g++)a.callback(g*a.n)}function q(a){var b=m();return setInterval(function(){m()!==b&&(a(),b=m())},500)}function m(){var a=h.body,b=h.documentElement;return Math.max(a.scrollHeight,a.offsetHeight,b.clientHeight,b.scrollHeight,b.offsetHeight)}function t(a){a=a.getBoundingClientRect().top;
+var b=void 0!==c.pageYOffset?c.pageYOffset:(h.documentElement||h.body.parentNode||h.body).scrollTop;return a+b}function u(){}function n(a,b){var g,e,d,l=null,c=0,f=function(){c=new Date;l=null;d=a.apply(g,e)};return function(){var k=new Date;c||(c=k);var h=b-(k-c);g=this;e=arguments;0>=h?(clearTimeout(l),l=null,c=k,d=a.apply(g,e)):l||(l=setTimeout(f,h));return d}}function v(){var a={},b;for(b in d)a[b]=u;c.ScrollTracker=a}if(c.navigator.userAgent.match(/MSIE [678]/gi))return v();var h=c.document;
+d.prototype.destroy=function(){clearInterval(this._artifacts._timer);c.removeEventListener("resize",this._artifacts.resize);c.removeEventListener("scroll",this._artifacts.scroll,!0)};d.prototype.on=function(a,b){var g=this._config;["percentages","pixels","elements"].forEach(function(e){a[e]&&["each","every"].forEach(function(c){a[e][c]&&a[e][c].forEach(function(a){g[e][c][a]=g[e][c][a]||[];g[e][c][a].push(b)})})});this._update()};d.prototype._update=function(){this._calculateMarks();this._checkDepth()};
+d.prototype._calculateMarks=function(){function a(a,b){return function(b,c){var g=b.getBoundingClientRect().top-h._context.getBoundingClientRect().top;d({label:a+"["+c+"]",depth:g,handlers:e.elements.every[a]})}}function b(a){return function(a){var b=Math.floor(a*c/100);d({label:String(a)+"%",depth:b,handlers:e.percentages.every[f]})}}function g(a){return function(b){d({label:String(b)+"px",depth:b,handlers:a})}}delete this._marks;this._fromTop=t(this._context);this._marks={};var e=this._config,c=
+this._contextHeight(),d=this._addMark.bind(this),h=this,f;if(!(c<this.minHeight)){for(f in e.percentages.every)p({n:Number(f),numerator:100,callback:b(e.percentages.every[f])});for(f in e.pixels.every)p({n:Number(f),numerator:c,callback:g(e.pixels.every[f])});for(f in e.percentages.each){var k=Math.floor(c*Number(f)/100);d({label:f+"%",depth:k,handlers:e.percentages.each[f]})}for(f in e.pixels.each)k=Number(f),d({label:f+"px",depth:k,handlers:e.pixels.each[f]});for(f in e.elements.every)k=[].slice.call(this._context.querySelectorAll(f)),
+k.length&&k.forEach(a(f,e.elements.every[f]));for(f in e.elements.each)if(k=this._context.querySelector(f))k=k.getBoundingClientRect().top-h._context.getBoundingClientRect().top,d({label:f,depth:k,handlers:e.elements.each[f]})}};d.prototype._checkDepth=function(){var a=this._marks,b=this._currentDepth(),c;for(c in a)b>=c&&!this._tracked[c]&&(a[c].forEach(function(a){a()}),this._tracked[c]=!0)};d.prototype.reset=function(){this._tracked={};delete this._marks;this.marks={}};d.prototype._contextHeight=
+function(){return this._context!==h.body?this._context.scrollHeight-5:this._context.clientHeight-5};d.prototype._currentDepth=function(){var a=this._context;var b=a.offsetHeight;var d="CSS1Compat"===h.compatMode?h.documentElement:h.body;d=d.clientHeight;a=a.getBoundingClientRect();b=Math.max(0,0<a.top?Math.min(b,d-a.top):a.bottom<d?a.bottom:d);this._context.scrollTop?a=this._context.scrollTop+b:(this._context.scrollTop=1,this._context.scrollTop?(this._context.scrollTop=0,a=this._context.scrollTop+
+b):a=c.pageYOffset||h.documentElement.scrollTop||h.body.scrollTop||0);return b?a+b:a>=this._fromTop?a:-1};d.prototype._addMark=function(a){var b=a.depth;this._marks[b]=(this._marks[b]||[]).concat(r(a))};c.ScrollTracker=d})(this);
+(function(c){function d(){var d=c.ScrollTracker();d.on({percentages:{each:[10,90],every:[25]}},function(c){dataLayer.push({event:"scrollTracking",attributes:{distance:c.data.label,label:document.location.pathname}})});delete c.ScrollTracker}"loading"!==document.readyState?d():document.addEventListener("DOMContentLoaded",d)})(window);</script>
+<script type="text/javascript" id="">(function(a,c,e,f,d,b){a.hj=a.hj||function(){(a.hj.q=a.hj.q||[]).push(arguments)};a._hjSettings={hjid:853294,hjsv:6};d=c.getElementsByTagName("head")[0];b=c.createElement("script");b.async=1;b.src=e+a._hjSettings.hjid+f+a._hjSettings.hjsv;d.appendChild(b)})(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv\x3d");</script><div id="write-director" class="write-director-position-right director-fixed" style="top: 296px;"><button class="button pink" type="button"><i class="sa-icon icon-email"></i><span>Napíšte priamo riaditeľovi</span></button><div class="write-director-form" style="transition: 0.2s all"><h2 class="write-director-header"><span>Podieľajte sa na zlepšení našich služieb.</span><span>Píšte svoje podnety priamo riaditeľovi.</span></h2><span id="write-director-close"><i class="sa-icon icon-krizek"></i></span><form class="director-form clearfix"><div id="director-contact"><div id="director-contact-left" class="clearfix"></div><div id="director-contact-right"></div></div><div id="form-submit-block"></div></form></div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="onesignal-slidedown-container" class="onesignal-slidedown-container onesignal-reset slide-down"><div id="onesignal-slidedown-dialog" class="onesignal-slidedown-dialog"><div id="normal-slidedown"><div class="slidedown-body" id="slidedown-body"><div class="slidedown-body-icon"><img alt="notification icon" src="https://www.regiojet.cz/opencms/export/sites/regiojet.cz/sys/images/push-notification-icon.png"></div><div class="slidedown-body-message">Najlepšie ponuky vám už neujdú! Zapnite si notifikácie</div><div class="clearfix"></div><div id="onesignal-loading-container"></div></div><div class="slidedown-footer" id="slidedown-footer"><button class="align-right primary slidedown-button" id="onesignal-slidedown-allow-button">Zapnúť</button><button class="align-right secondary slidedown-button" id="onesignal-slidedown-cancel-button">Nemám záujem</button><div class="clearfix"></div></div></div></div></div></body></html>

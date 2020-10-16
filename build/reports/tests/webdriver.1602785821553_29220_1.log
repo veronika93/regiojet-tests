@@ -1,0 +1,496 @@
+[1602785821.821][INFO]: Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 10933
+[1602785821.821][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1602785822.415][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\F93IQOP\\dev\\repos\\junit5-jupiter-starter-gradle-kotlin\\build\\downloads\\1602785818478_29220_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\F93IQOP\\dev\\repos\\junit5-jupiter-starter-gradle-kotlin\\build\\downloads\\1602785818478_29220_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1602785822.420][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\F93IQOP\\dev\\repos\\junit5-jupiter-starter-gradle-kotlin\\build\\downloads\\1602785818478_29220_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1602785822.421][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1602785822.423][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\F93IQOP\AppData\Local\Temp\1\scoped_dir9912_1219734467" data:,
+[1602785823.314][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1602785825.326][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1602785827.338][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "85.0.4183.102",
+      "chrome": {
+         "chromedriverVersion": "85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689})",
+         "userDataDir": "C:\\Users\\F93IQOP\\AppData\\Local\\Temp\\1\\scoped_dir9912_1219734467"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:58027"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "bb4aa66d27827b4ab5f28c3c52a334c3"
+}
+[1602785827.369][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1602785827.369][INFO]: Waiting for pending navigations...
+[1602785827.372][INFO]: Done waiting for pending navigations. Status: ok
+[1602785827.483][INFO]: Waiting for pending navigations...
+[1602785827.485][INFO]: Done waiting for pending navigations. Status: ok
+[1602785827.485][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE SetWindowRect {
+   "height": 768,
+   "width": 1298,
+   "x": 10,
+   "y": 10
+}
+[1602785827.488][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1602785827.488][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE SetTimeouts
+[1602785827.494][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND Navigate {
+   "url": "https://www.regiojet.sk/"
+}
+[1602785827.494][INFO]: Waiting for pending navigations...
+[1602785827.496][INFO]: Done waiting for pending navigations. Status: ok
+[1602785828.812][INFO]: Waiting for pending navigations...
+[1602785831.029][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.029][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE Navigate
+[1602785831.162][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": "#destination_from"
+}
+[1602785831.214][INFO]: Waiting for pending navigations...
+[1602785831.219][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.336][INFO]: Waiting for pending navigations...
+[1602785831.347][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.348][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "c07937e0-815f-4d58-b486-c3ed79e5188e"
+}
+[1602785831.392][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "c07937e0-815f-4d58-b486-c3ed79e5188e"
+   } ],
+   "script": "return (function(){return function(){var k=this;function l(a){return void 0!==a}function m(a){return\"string\"==typeof a}function aa(a,b){a=a.split(\".\");var c=k;a[0]in c||!c.execScript||c.execScript(..."
+}
+[1602785831.392][INFO]: Waiting for pending navigations...
+[1602785831.496][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.565][INFO]: Waiting for pending navigations...
+[1602785831.569][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.569][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE ExecuteScript true
+[1602785831.577][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND ClearElement {
+   "id": "c07937e0-815f-4d58-b486-c3ed79e5188e"
+}
+[1602785831.577][INFO]: Waiting for pending navigations...
+[1602785831.579][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.618][INFO]: 
+	=== NOTE: ===
+	The Clear command in ChromeDriver 2.43 and above
+	has been updated to conform to the current standard,
+	including raising blur event after clearing.
+
+[1602785831.639][INFO]: Waiting for pending navigations...
+[1602785831.641][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.641][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE ClearElement
+[1602785831.652][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND TypeElement {
+   "id": "c07937e0-815f-4d58-b486-c3ed79e5188e",
+   "text": "Ostrava",
+   "value": [ "O", "s", "t", "r", "a", "v", "a" ]
+}
+[1602785831.653][INFO]: Waiting for pending navigations...
+[1602785831.654][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.751][INFO]: Waiting for pending navigations...
+[1602785831.767][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.767][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE TypeElement
+[1602785831.774][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": "#destination_to"
+}
+[1602785831.774][INFO]: Waiting for pending navigations...
+[1602785831.776][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.792][INFO]: Waiting for pending navigations...
+[1602785831.793][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.793][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "22bc1129-68b6-4865-b65e-5d0349cd2b95"
+}
+[1602785831.812][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "22bc1129-68b6-4865-b65e-5d0349cd2b95"
+   } ],
+   "script": "return (function(){return function(){var k=this;function l(a){return void 0!==a}function m(a){return\"string\"==typeof a}function aa(a,b){a=a.split(\".\");var c=k;a[0]in c||!c.execScript||c.execScript(..."
+}
+[1602785831.812][INFO]: Waiting for pending navigations...
+[1602785831.813][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.828][INFO]: Waiting for pending navigations...
+[1602785831.829][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.829][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE ExecuteScript true
+[1602785831.832][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND ClearElement {
+   "id": "22bc1129-68b6-4865-b65e-5d0349cd2b95"
+}
+[1602785831.832][INFO]: Waiting for pending navigations...
+[1602785831.833][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.887][INFO]: Waiting for pending navigations...
+[1602785831.894][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.894][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE ClearElement
+[1602785831.899][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND TypeElement {
+   "id": "22bc1129-68b6-4865-b65e-5d0349cd2b95",
+   "text": "Brno",
+   "value": [ "B", "r", "n", "o" ]
+}
+[1602785831.900][INFO]: Waiting for pending navigations...
+[1602785831.901][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.961][INFO]: Waiting for pending navigations...
+[1602785831.968][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.968][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE TypeElement
+[1602785831.971][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": "#destination_from"
+}
+[1602785831.971][INFO]: Waiting for pending navigations...
+[1602785831.972][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.978][INFO]: Waiting for pending navigations...
+[1602785831.978][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.978][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "c07937e0-815f-4d58-b486-c3ed79e5188e"
+}
+[1602785831.989][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "c07937e0-815f-4d58-b486-c3ed79e5188e"
+   } ],
+   "script": "return (function(){return function(){var k=this;function l(a){return void 0!==a}function m(a){return\"string\"==typeof a}function aa(a,b){a=a.split(\".\");var c=k;a[0]in c||!c.execScript||c.execScript(..."
+}
+[1602785831.990][INFO]: Waiting for pending navigations...
+[1602785831.991][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.997][INFO]: Waiting for pending navigations...
+[1602785831.998][INFO]: Done waiting for pending navigations. Status: ok
+[1602785831.998][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE ExecuteScript true
+[1602785832.004][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND ClickElement {
+   "id": "c07937e0-815f-4d58-b486-c3ed79e5188e"
+}
+[1602785832.004][INFO]: Waiting for pending navigations...
+[1602785832.006][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.099][INFO]: Waiting for pending navigations...
+[1602785832.101][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.101][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE ClickElement
+[1602785832.106][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785832.106][INFO]: Waiting for pending navigations...
+[1602785832.107][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.120][INFO]: Waiting for pending navigations...
+[1602785832.121][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.121][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785832.344][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785832.345][INFO]: Waiting for pending navigations...
+[1602785832.346][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.352][INFO]: Waiting for pending navigations...
+[1602785832.353][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.353][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785832.559][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785832.559][INFO]: Waiting for pending navigations...
+[1602785832.560][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.566][INFO]: Waiting for pending navigations...
+[1602785832.567][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.567][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785832.774][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785832.774][INFO]: Waiting for pending navigations...
+[1602785832.777][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.783][INFO]: Waiting for pending navigations...
+[1602785832.783][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.783][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785832.990][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785832.990][INFO]: Waiting for pending navigations...
+[1602785832.991][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.998][INFO]: Waiting for pending navigations...
+[1602785832.999][INFO]: Done waiting for pending navigations. Status: ok
+[1602785832.999][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785833.205][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785833.205][INFO]: Waiting for pending navigations...
+[1602785833.206][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.213][INFO]: Waiting for pending navigations...
+[1602785833.215][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.215][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785833.419][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785833.419][INFO]: Waiting for pending navigations...
+[1602785833.420][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.426][INFO]: Waiting for pending navigations...
+[1602785833.427][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.427][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785833.639][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785833.639][INFO]: Waiting for pending navigations...
+[1602785833.640][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.645][INFO]: Waiting for pending navigations...
+[1602785833.646][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.646][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785833.850][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785833.850][INFO]: Waiting for pending navigations...
+[1602785833.851][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.862][INFO]: Waiting for pending navigations...
+[1602785833.865][INFO]: Done waiting for pending navigations. Status: ok
+[1602785833.865][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785834.069][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785834.069][INFO]: Waiting for pending navigations...
+[1602785834.070][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.076][INFO]: Waiting for pending navigations...
+[1602785834.077][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.077][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785834.281][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785834.281][INFO]: Waiting for pending navigations...
+[1602785834.282][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.287][INFO]: Waiting for pending navigations...
+[1602785834.289][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.289][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785834.492][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785834.492][INFO]: Waiting for pending navigations...
+[1602785834.493][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.498][INFO]: Waiting for pending navigations...
+[1602785834.499][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.499][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785834.703][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785834.703][INFO]: Waiting for pending navigations...
+[1602785834.704][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.709][INFO]: Waiting for pending navigations...
+[1602785834.710][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.710][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785834.912][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785834.912][INFO]: Waiting for pending navigations...
+[1602785834.913][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.918][INFO]: Waiting for pending navigations...
+[1602785834.919][INFO]: Done waiting for pending navigations. Status: ok
+[1602785834.919][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785835.124][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785835.124][INFO]: Waiting for pending navigations...
+[1602785835.125][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.129][INFO]: Waiting for pending navigations...
+[1602785835.130][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.130][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785835.333][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785835.333][INFO]: Waiting for pending navigations...
+[1602785835.334][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.339][INFO]: Waiting for pending navigations...
+[1602785835.340][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.340][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785835.543][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785835.543][INFO]: Waiting for pending navigations...
+[1602785835.544][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.548][INFO]: Waiting for pending navigations...
+[1602785835.549][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.549][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785835.753][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785835.753][INFO]: Waiting for pending navigations...
+[1602785835.755][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.760][INFO]: Waiting for pending navigations...
+[1602785835.761][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.761][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785835.964][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND FindElement {
+   "using": "css selector",
+   "value": ".input\\-addon\\ open\\-datepicker"
+}
+[1602785835.964][INFO]: Waiting for pending navigations...
+[1602785835.965][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.972][INFO]: Waiting for pending navigations...
+[1602785835.973][INFO]: Done waiting for pending navigations. Status: ok
+[1602785835.973][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":".input\-addon\ open\-datepicker"}
+  (Session info: chrome=85.0.4183.102)
+[1602785836.180][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var source = document.documentElement.outerHTML; \nif (!source) { source = new XMLSerializer().serializeToString(document); }\nreturn source;"
+}
+[1602785836.187][INFO]: Waiting for pending navigations...
+[1602785836.192][INFO]: Done waiting for pending navigations. Status: ok
+[1602785836.202][INFO]: Waiting for pending navigations...
+[1602785836.203][INFO]: Done waiting for pending navigations. Status: ok
+[1602785836.203][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE ExecuteScript "\u003Chtml lang=\"en\" class=\" no-touchevents js no-touch csstransitions\">\u003Chead aria-hidden=\"true\">\n\u003Cmeta charset=\"utf-8\">\n\u003Ctitle>RegioJet | Autobusy a vlaky\u003C/title>\n\u003Cmeta name=\"author\" content=\"Student A..."
+[1602785836.226][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND Screenshot {
+
+}
+[1602785836.226][INFO]: Waiting for pending navigations...
+[1602785836.227][INFO]: Done waiting for pending navigations. Status: ok
+[1602785836.902][INFO]: Waiting for pending navigations...
+[1602785836.904][INFO]: Done waiting for pending navigations. Status: ok
+[1602785836.905][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAAB4UAAAP+CAYAAAAM7MkgAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3Xd4FFUXBvB3djebHmpCCyX0EkrohJYA0qRXEQWlqzRFFCsgooAoIIgUpSmggFQpHzUIhNBDlyahQ0JIb9vm+yMmJGR3ZluSTXx/zxMlO/fO3JktmZ0z51xBF..."
+[1602785837.117][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] COMMAND Quit {
+
+}
+[1602785837.298][INFO]: [bb4aa66d27827b4ab5f28c3c52a334c3] RESPONSE Quit

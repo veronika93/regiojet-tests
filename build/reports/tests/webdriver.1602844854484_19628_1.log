@@ -1,0 +1,184 @@
+[1602844854.771][INFO]: Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 18919
+[1602844854.772][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1602844855.532][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\F93IQOP\\dev\\repos\\junit5-jupiter-starter-gradle-kotlin\\build\\downloads\\1602844851605_19628_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\F93IQOP\\dev\\repos\\junit5-jupiter-starter-gradle-kotlin\\build\\downloads\\1602844851605_19628_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1602844855.538][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\F93IQOP\\dev\\repos\\junit5-jupiter-starter-gradle-kotlin\\build\\downloads\\1602844851605_19628_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1602844855.539][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1602844855.541][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\F93IQOP\AppData\Local\Temp\1\scoped_dir26308_1130195168" data:,
+[1602844856.376][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1602844858.384][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1602844860.394][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "85.0.4183.102",
+      "chrome": {
+         "chromedriverVersion": "85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689})",
+         "userDataDir": "C:\\Users\\F93IQOP\\AppData\\Local\\Temp\\1\\scoped_dir26308_1130195168"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:56916"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "1d012e9fe646dadd4dd5d64aba16c2bd"
+}
+[1602844860.431][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1602844860.431][INFO]: Waiting for pending navigations...
+[1602844860.434][INFO]: Done waiting for pending navigations. Status: ok
+[1602844860.544][INFO]: Waiting for pending navigations...
+[1602844860.546][INFO]: Done waiting for pending navigations. Status: ok
+[1602844860.546][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] RESPONSE SetWindowRect {
+   "height": 768,
+   "width": 1298,
+   "x": 10,
+   "y": 10
+}
+[1602844860.550][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1602844860.550][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] RESPONSE SetTimeouts
+[1602844860.556][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] COMMAND Navigate {
+   "url": "https://www.regiojet.sk/"
+}
+[1602844860.556][INFO]: Waiting for pending navigations...
+[1602844860.557][INFO]: Done waiting for pending navigations. Status: ok
+[1602844861.722][INFO]: Waiting for pending navigations...
+[1602844864.258][INFO]: Done waiting for pending navigations. Status: ok
+[1602844864.258][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] RESPONSE Navigate
+[1602844876.123][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"ybus-destination_from-block\"]/div"
+}
+[1602844876.130][INFO]: Waiting for pending navigations...
+[1602844876.131][INFO]: Done waiting for pending navigations. Status: ok
+[1602844876.139][INFO]: Waiting for pending navigations...
+[1602844876.140][INFO]: Done waiting for pending navigations. Status: ok
+[1602844876.140][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "93a4204c-d187-4074-beb4-966ffef0959e"
+}
+[1602844876.140][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] COMMAND Quit {
+
+}
+[1602844876.212][INFO]: [1d012e9fe646dadd4dd5d64aba16c2bd] RESPONSE Quit
